@@ -16,9 +16,9 @@ class UserTest {
 
     @Test
     void createdObject() {
-        User user1 = new User("LOGIN", "EMAIL@.ru");
+        User user1 = new User("LOGIN", "EMAIL.ru");
         String login = "LOGIN";
-        String email = "EMAIL@.ru";
+        String email = "EMAIL.ru";
         Assertions.assertEquals(login, user1.getLogin());
         Assertions.assertEquals(email, user1.getEmail());
     }

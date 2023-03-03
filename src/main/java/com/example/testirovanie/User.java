@@ -5,11 +5,15 @@ public class User {
     public static String email;
 
     public User(String login, String email) {
-        if (login.length() != email.length() || login!=null|| !login.isEmpty()||!login.isBlank())
+        if (login.length() != email.length() || login != null || !login.isEmpty() || !login.isBlank()) {
             this.login = login;
-
-        if (email.contains("@") || email.contains(".")||email!=null||!email.isEmpty()||!email.isBlank()) {
+        } else {
+            throw new RuntimeException("incorrect Login");
+        }
+        if (email.contains("@") || email.contains(".") || email != null || !email.isEmpty() || !email.isBlank()) {
             this.email = email;
+        } else {
+            throw new RuntimeException("incorrect email");
         }
     }
 
